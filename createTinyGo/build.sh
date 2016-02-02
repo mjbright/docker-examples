@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker run -ti golang GOPATH=src go build hello
+docker run -it -v $PWD:/go golang go build -v hello
 
-docker run -ti golang GOPATH=src go build webserver
+docker run -it -v $PWD:/go golang go build -v webserver
 
 
