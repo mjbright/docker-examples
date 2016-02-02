@@ -1,0 +1,35 @@
+
+version: 2
+services:
+  weba:
+    build: ../nodeJS
+    expose:
+      - 80
+
+  webb:
+    build: ../nodeJS
+    expose:
+      - 80
+
+  webc:
+    build: ../nodeJS
+    expose:
+      - 80
+
+  haproxy:
+    image: haproxy
+    volumes:
+     - haproxy:/haproxy-override
+    links:
+     - weba
+     - webb
+     - webc
+    ports:
+     - "80:80"
+     - "70:70"
+
+    expose:
+     - "80"
+     - "70"
+
+
