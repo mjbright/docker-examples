@@ -19,7 +19,7 @@ services:
   haproxy:
     image: haproxy
     volumes:
-     - haproxy:/haproxy-override
+     - ./haproxy:/haproxy-override
     links:
      - weba
      - webb
