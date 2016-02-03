@@ -13,8 +13,8 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", helloHandler)
 
-	fmt.Println("Started, serving at 8080")
-	err := http.ListenAndServe(":8080", nil)
+	fmt.Println("Started, serving at 80")
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		panic("ListenAndServe: " + err.Error())
 	}
