@@ -2,11 +2,10 @@
 
 TAG=lab/toolset
 
-echo; echo "-- Build helloWorld.exe"
-gcc -static helloWorld.c -o helloWorld.exe
-ls -al helloWorld.exe
+cp ../createTinyC/helloWorld.exe helloWorld.exe
+cp ../createTinyGo/hello         helloWorldGo.exe
 
-ldd "helloWorld.exe"
+ls -altr *.exe
 
 echo; echo "-- Build the docker image based upon 'hello-world' as <$TAG>"
 docker build -t $TAG ./
