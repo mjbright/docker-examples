@@ -1,6 +1,6 @@
 FROM python:2.7
 
-MAINTAINER "Docker Build Lab" <dockerlab@mjbright.net>
+MAINTAINER "Docker Build Lab" <dockerlabs@mjbright.net>
 
 WORKDIR /src
 
