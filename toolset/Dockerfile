@@ -2,9 +2,9 @@
 FROM hello-world
 MAINTAINER "Docker Build Lab" <dockerlabs@mjbright.net>
 
-ADD ./helloWorld.exe /helloWorld
+ADD ./helloWorld /helloWorld
 CMD ["/helloWorld"]
 
-ADD ./helloWorldGo.exe /helloWorldGo
+ADD ./helloWorldGo /helloWorldGo
 CMD ["/helloWorldGo"]
 

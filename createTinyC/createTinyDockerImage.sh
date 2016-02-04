@@ -2,11 +2,11 @@
 
 TAG=lab/c_prog
 
-echo; echo "-- Build helloWorld.exe"
-gcc -static helloWorld.c -o helloWorld.exe
-ls -al helloWorld.exe
+echo; echo "-- Build helloWorld"
+gcc -static helloWorld.c -o helloWorld
+ls -al helloWorld
 
-ldd "helloWorld.exe"
+ldd "helloWorld"
 
 echo; echo "-- Build the docker image <$TAG>"
 docker build -t $TAG ./

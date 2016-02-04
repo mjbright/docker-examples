@@ -2,10 +2,10 @@
 
 TAG=lab/toolset
 
-cp ../createTinyC/helloWorld.exe helloWorld.exe
-cp ../createTinyGo/hello         helloWorldGo.exe
+cp ../createTinyC/helloWorld helloWorld
+cp ../createTinyGo/hello         helloWorldGo
 
-ls -altr *.exe
+ls -altr 
 
 echo; echo "-- Build the docker image based upon 'hello-world' as <$TAG>"
 docker build -t $TAG ./
