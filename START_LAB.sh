@@ -12,6 +12,7 @@ DEST_DIR=/tmp/initial_${DIR}
 
 find $SRC_DIR/ -iname 'docker-compose.yml*' -exec rm {} \;
 find $SRC_DIR/ -iname 'Dockerfile*'         -exec rm {} \;
+find $SRC_DIR/ -iname '*build*.sh'          -exec rm {} \;
 
 
 
