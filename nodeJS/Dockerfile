@@ -1,5 +1,4 @@
 
-# use our prepared Raspberry Pi compatible Docker base image with Node.js
 FROM node
 
 # make the src folder available in the docker image

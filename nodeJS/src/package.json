@@ -4,7 +4,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Node.js Hello world app on docker",
-  "author": "hypriot.com",
+  "author": "dockerlabs@mjbright.net",
   "dependencies": {
     "express": "4.12.0"
   }
