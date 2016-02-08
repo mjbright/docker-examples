@@ -7,15 +7,12 @@ services:
       - 80
 
   webb:
-    build: ../createTinyGo
-    command: /webserver
-    # dockerfile: Dockerfile.webserver
+    build: ../nodeJS
     expose:
       - 80
 
   webc:
-    image: python
-    command: python3 -m http.server --bind 0.0.0.0 80
+    build: ../nodeJS
     expose:
       - 80
 
