@@ -14,8 +14,8 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", helloHandler)
 
-	fmt.Println("Started, serving at 80")
-	err := http.ListenAndServe(":80", nil)
+	fmt.Println("Started, serving at 8000")
+	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		panic("ListenAndServe: " + err.Error())
 	}
