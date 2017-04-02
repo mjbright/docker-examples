@@ -1,0 +1,15 @@
+
+FROM mjbright/docker-demo
+
+# Change colour of both ascii text and html o/p:
+RUN sed -i -e "s/BASE_IMAGE_PATH += '_blue'/BASE_IMAGE_PATH += '_red'/" docker-demo.py
+RUN sed -i -e "s/docker_blue.png/docker_red.png/" index.html
+
+WORKDIR /src
+
+CMD python3 docker-demo.py
+
+
+
+
+
