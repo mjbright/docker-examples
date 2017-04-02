@@ -3,6 +3,7 @@
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import socket, os, shutil
+import sys
 
 
 PORT=8080
@@ -110,16 +111,36 @@ class dockerDemoHTTPServer_RequestHandler(BaseHTTPRequestHandler):
             return 'image/png'
         return 'application/octet-stream'
 
-def run():
-    print('starting server...')
+def httpServer(port):
+    print('starting server, listening on port {} ...'.format(port))
            
     # Server settings
-    server_address = ('127.0.0.1', PORT)
+    server_address = ('127.0.0.1', port)
     httpd = HTTPServer(server_address, dockerDemoHTTPServer_RequestHandler)
     print('running server...')
     httpd.serve_forever()
-        
-                         
-run()
+
+##----------------------------------------------------------------------
+# Args:
+
+a=1
+port=PORT
+
+while a < len(sys.argv):
+
+    if sys.argv[a] == '-p':
+        a += 1
+        port=int(sys.argv[a])
+        a += 1
+        continue
+
+    print("Error: unknown option: <" + sys.argv[a] + ">")
+    sys.exit(1)
+
+
+##----------------------------------------------------------------------
+# Main:
+
+httpServer(port)
 
 
