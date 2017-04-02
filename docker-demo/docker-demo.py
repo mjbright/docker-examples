@@ -115,7 +115,8 @@ def httpServer(port):
     print('starting server, listening on port {} ...'.format(port))
            
     # Server settings
-    server_address = ('127.0.0.1', port)
+    #server_address = ('127.0.0.1', port)
+    server_address = ('0.0.0.0', port)
     httpd = HTTPServer(server_address, dockerDemoHTTPServer_RequestHandler)
     print('running server...')
     httpd.serve_forever()
