@@ -9,6 +9,10 @@ html, body {
     font-size: 12pt;
     color: #7e7e7e;
 }
+.highlight {
+    font-size: 24pt;
+    color: #bf7f3f;
+}
 div.content {
     margin: 2% auto 0 auto;
     width: 100%;
